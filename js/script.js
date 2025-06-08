@@ -311,10 +311,10 @@ function loadSidebarState() {
         toggleOnBtn.style.display = "none";
     }
 
-    if (savedFilterSectionMain === "none") {
-        filterSectionMain.style.display = "none";
-    } else {
+    if (savedFilterSectionMain === "block") {
         filterSectionMain.style.display = "block";
+    } else {
+        filterSectionMain.style.display = "none";
     }
 }
 
