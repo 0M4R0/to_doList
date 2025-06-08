@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>To do List</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div id="sidebar" class="sidebar">
+            <!-- Toggle Sidebar -->
+            <button title="Open Sidebar" type="button" id="toggle-sidebar-on" class="toggle-sidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="sidebar-content">
+                <!-- Sidebar Content -->
+                <div class="sidebar-content-container">
+                    <div class="sidebar-content-container">
+                        <div class="sidebar-content-item">
+                            <button id="add-task-button-sidebar" type="button" class="add-task-button-sidebar">
+                                <i class="fa-solid fa-plus"></i>New task
+                            </button>
+                        </div>
+                        <!-- Filters -->
+                        <div class="filter-section">
+                            <h4>Filter Tasks</h4>
+                            <div class="filter-buttons">
+                                <button type="button" class="filter-btn active" data-filter="all">
+                                    <i class="fa-solid fa-list"></i> All Tasks
+                                </button>
+                                <button type="button" class="filter-btn" data-filter="pending">
+                                    <i class="fa-solid fa-clock"></i> Pending
+                                </button>
+                                <button type="button" class="filter-btn" data-filter="completed">
+                                    <i class="fa-solid fa-check"></i> Completed
+                                </button>
+                                <button type="button" class="filter-btn" data-filter="high">
+                                    <i class="fa-solid fa-exclamation"></i> High Priority
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer>
+                    <p>&copy; <span id="current-year"></span> To do List. All rights reserved.</p>
+                    <p>Developed by <a href="https://github.com/0M4R0" target="_blank" rel="noopener"><i class="fab fa-github"></i> 0M4R0</a></p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <main>
+            <!-- Header -->
+            <div class="header-container">
+                <!-- Toggle Sidebar -->
+                <div class="header-container-title">
+                    <button title="Open Sidebar" type="button" id="toggle-sidebar" class="toggle-sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <h1>To do List</h1>
+                </div>
+                <div class="header-container-btn">
+                    <button title="Dark Mode" type="button" id="theme-toggle" class="theme-toggle">
+                        <i class="fa-solid fa-moon"></i>Dark Mode
+                    </button>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="task-list">
+                    <div class="task-list-container">
+                        <div class="task-list-container-header">
+                            <div class="task-list-container-header-title">
+                                <p id="title-task" class="title-task task-list-title"></p>
+                                <p id="help-task-text" class="help-task-text task-list-count"></p>
+                            </div>
+                            <div class="task-list-container-header-completed">
+                                <p id="remaining-tasks" class="title-task task-list-completed-count"></p>
+                                <p id="help-task-text-remaining" class="help-task-text task-list-completed-text"></p>
+                            </div>
+                        </div>
+
+                        <!-- Filters -->
+                        <div id="filter-section-main" class="filter-section-main">
+                            <h4>Filter Tasks</h4>
+                            <div id="filter-buttons-main-container" class="filter-buttons-main-container">
+                                <button type="button" class="filter-btn active" data-filter="all">
+                                    <i class="fa-solid fa-list"></i> All Tasks
+                                </button>
+                                <button type="button" class="filter-btn" data-filter="pending">
+                                    <i class="fa-solid fa-clock"></i> Pending
+                                </button>
+                                <button type="button" class="filter-btn" data-filter="completed">
+                                    <i class="fa-solid fa-check"></i> Completed
+                                </button>
+                                <button type="button" class="filter-btn" data-filter="high">
+                                    <i class="fa-solid fa-exclamation"></i> High Priority
+                                </button>
+                            </div>
+                        </div>
+                        <p id="error-message"></p>
+                        <div id="task-list-item" class="task-list-item"></div>
+                    </div>
+                </div>
+
+                <div class="add-task">
+                    <div class="add-task-container">
+                        <input id="task-input" type="text" placeholder="Add a new task">
+                        <select title="Priority" id="priority-select" class="priority-select">
+                            <option value="high">High Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="low">Low Priority</option>
+                        </select>
+                        <button title="Add Task" id="add-task-button" type="submit" class="add-task-button">
+                            <i class="fa-solid fa-plus"></i>Add Task
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
